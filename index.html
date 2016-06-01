@@ -1,130 +1,187 @@
 <html>
 <head>
-<title>CYBER Equipment</title>
-<style>
-body
-{
-	background-color: #f8ed50;
-	font-family: monospace;
-	background-image: url("index.svg");
-	background-attachment: fixed;
-	color: #fff;
-	margin: 30px 0 0 0;
-}
+    <title>CYBER Equipment</title>
 
-h1
-{
-	font-size: 50pt;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-.contact
-{
-	background-color: RGBA(0, 0, 0, 0.7);
-	color: #00b300;
-	width: 300px;
-	padding: 10px;
-	margin: 200px 20px 20px 20px;
-	float: left;
-	position: fixed;
-}
+    <style>
+        body {
+            background-color: #f8ed50;
+            font-family: monospace;
+            background-image: url("index.svg");
+            background-attachment: fixed;
+            color: #fff;
+            margin: 30px 0 0 0;
+        }
 
-.header
-{
-	background-image: url("cyber_plain.png");
-	background-repeat: repeat-x;
-	background-size: contain;
-	height: 100px;	
-	-webkit-animation: backgroundScroll 10s linear infinite;
-	animation: backgroundScroll 10s linear infinite;
-	-ms-transform: rotate(2deg); /* IE 9 */
-	-webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
-        transform: rotate(2deg);
-        position: fixed;
-        width: 100%;
-        margin-top: 10px;
-}
+        h1 {
+            font-size: 50pt;
+        }
 
-@-webkit-keyframes backgroundScroll 
-{
-	from {background-position: 0 0;}
-	to {background-position: -277px 0;}
-}
- 
-@keyframes backgroundScroll 
-{
-	from {background-position: 0 0;}
-	to {background-position: -277px 0;}
-}
+        .contact {
+            background-color: RGBA(0, 0, 0, 0.7);
+            color: #00b300;
+            width: 300px;
+            padding: 10px;
+            margin: 200px 20px 20px 20px;
+            float: left;
+            position: fixed;
+        }
 
-.tweets
-{
-	margin: 20px;
-	background-color: RGBA(0,0,0,0.7) !important;
-	max-width: 520px;
-	float: left;
-	margin: 200px 20px 20px 363px;
-}
+        .header {
+            background-image: url("cyber_plain.png");
+            background-repeat: repeat-x;
+            background-size: contain;
+            height: 100px;
+            -webkit-animation: backgroundScroll 10s linear infinite;
+            animation: backgroundScroll 10s linear infinite;
+            -ms-transform: rotate(2deg); /* IE 9 */
+            -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
+            transform: rotate(2deg);
+            position: fixed;
+            width: 100%;
+            margin-top: 10px;
+        }
 
-a.tooltip {outline:none; }
-a.tooltip strong {line-height:30px;}
-a.tooltip:hover {text-decoration:none;} 
-a.tooltip span 
-{
-    z-index:10;
-    display:none; 
-    padding:14px 20px;
-    margin-top:-30px; 
-    margin-left:315px;
-    width:800px; 
-    line-height:16px;
-}
-a.tooltip:hover span
-{
-    display:inline; 
-    position:absolute; 
-    color:#fff;
-    border:1px solid #111; 
-    background:#000;
-}
+        @-webkit-keyframes backgroundScroll {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -277px 0;
+            }
+        }
 
-.callout
-{
-	z-index:20;
-	position:absolute;
-	top:-180px;
-	border:0;
-	left:12px;
-}
-                        
-/*CSS3 extras*/
-a.tooltip span
-{
-	border-radius:4px;
-	box-shadow: 5px 5px 8px #000;
-}
-                                
-</style>
+        @keyframes backgroundScroll {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -277px 0;
+            }
+        }
+
+        .tweets {
+            margin: 20px;
+            background-color: RGBA(0, 0, 0, 0.7) !important;
+            max-width: 520px;
+            float: left;
+            margin: 200px 20px 20px 363px;
+        }
+
+        a.tooltip {
+            outline: none;
+        }
+
+        a.tooltip strong {
+            line-height: 30px;
+        }
+
+        a.tooltip:hover {
+            text-decoration: none;
+        }
+
+        a.tooltip span {
+            z-index: 10;
+            display: none;
+            padding: 14px 20px;
+            margin-top: -30px;
+            margin-left: 315px;
+            width: 800px;
+            line-height: 16px;
+        }
+
+        a.tooltip:hover span {
+            display: inline;
+            position: absolute;
+            color: #fff;
+            border: 1px solid #111;
+            background: #000;
+        }
+
+        .callout {
+            z-index: 20;
+            position: absolute;
+            top: -180px;
+            border: 0;
+            left: 12px;
+        }
+
+        /*CSS3 extras*/
+        a.tooltip span {
+            border-radius: 4px;
+            box-shadow: 5px 5px 8px #000;
+        }
+
+        @media only screen and (max-device-width : 667px) {
+            .header {
+                position: static;
+            }
+
+            .contact {
+                position: static;
+                width: auto;
+                margin: 10px;
+                float: none;
+            }
+
+            .tweets {
+                float: none;
+                margin: 10px;
+            }
+
+            #twitter-widget-0 {
+                height: 100% !important;
+                min-height: 0 !important;
+            }
+
+            a.tooltip:hover span {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 <div class="header"></div>
 <div class="contact">
-<p>Contact <a href="https://twitter.com/cyberrolle">@cyberrolle</a> if you need cyber</p>
-<p>currently available: <a class="tooltip" href="#">CYBER Absperrband
-<span class="callout">
-<img src="cyberband.jpg"/>
-ca. 100m per Roll (~400 CYBER)
-</span>
-</a> (aka "digitaler Stacheldraht")</p>
-<p>currently available: <a class="tooltip" href="#">CYBER Sticker
-<span class="callout">
-<img src="sticker.jpg"/>
-10,5cm x 3,5cm
-</span></a></p>
-</div>            
+    <p>
+        Contact
+        <a href="https://twitter.com/cyberrolle">@cyberrolle</a>
+        if you need cyber
+    </p>
+    <p>
+        currently available:
+        <a class="tooltip" href="cyberband.jpg">
+            CYBER Absperrband
+            <span class="callout">
+                <img src="cyberband.jpg"/>
+                ca. 100m per Roll (~400 CYBER)
+            </span>
+        </a>
+        (aka "digitaler Stacheldraht")
+    </p>
+    <p>currently available:
+        <a class="tooltip" href="sticker.jpg">
+            CYBER Sticker
+            <span class="callout">
+                <img src="sticker.jpg"/>
+                10,5cm x 3,5cm
+            </span>
+        </a>
+    </p>
+</div>
 <div class="tweets">
-<a class="twitter-timeline"  href="https://twitter.com/Cyberrolle" data-widget-id="733209425767452672"
-data-chrome="transparent noscrollbar noborders">Tweets von @Cyberrolle </a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div>          
+    <a class="twitter-timeline" href="https://twitter.com/Cyberrolle" data-widget-id="733209425767452672"
+       data-chrome="transparent noscrollbar noborders">Tweets von @Cyberrolle </a>
+    <script>!function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + "://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, "script", "twitter-wjs");</script>
+</div>
 </body>
 </html>
