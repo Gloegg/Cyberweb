@@ -1,6 +1,9 @@
 <html>
 <head>
     <title>CYBER Equipment</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
     <style>
         body {
             background-color: #f8ed50;
@@ -110,19 +113,45 @@
             box-shadow: 5px 5px 8px #000;
         }
 
+        @media only screen and (max-device-width : 667px) {
+            .header {
+                position: static;
+            }
+
+            .contact {
+                position: static;
+                width: auto;
+                margin: 10px;
+                float: none;
+            }
+
+            .tweets {
+                float: none;
+                margin: 10px;
+            }
+
+            #twitter-widget-0 {
+                height: 100% !important;
+                min-height: 0 !important;
+            }
+
+            a.tooltip:hover span {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
 <div class="header"></div>
 <div class="contact">
     <p>Contact <a href="https://twitter.com/cyberrolle">@cyberrolle</a> if you need cyber</p>
-    <p>currently available: <a class="tooltip" href="#">CYBER Absperrband
+    <p>currently available: <a class="tooltip" href="cyberband.jpg">CYBER Absperrband
 <span class="callout">
 <img src="cyberband.jpg"/>
 ca. 100m per Roll (~400 CYBER)
 </span>
     </a> (aka "digitaler Stacheldraht")</p>
-    <p>currently available: <a class="tooltip" href="#">CYBER Sticker
+    <p>currently available: <a class="tooltip" href="sticker.jpg">CYBER Sticker
 <span class="callout">
 <img src="sticker.jpg"/>
 10,5cm x 3,5cm
